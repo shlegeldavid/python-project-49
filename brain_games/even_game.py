@@ -22,7 +22,6 @@ def even_brain_game():
             n += 1
         else:
             if is_even(random_number) == 'yes' and is_even(random_number) != answer:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
-            return
+                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
+            return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
     print(f'Congratulations, {name}!')
