@@ -25,3 +25,4 @@ def even_brain_game():
                 return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
             return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
     print(f'Congratulations, {name}!')
+    
