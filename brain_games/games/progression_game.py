@@ -40,7 +40,7 @@ def progression_brain_game():
         missing_part = random.choice(numbers)
         for i in range(list_length):
             if numbers[i] == missing_part:
-                numbers[i] = '...'
+                numbers[i] = '..'
         while index < list_length:
             number = numbers.pop(0)
             number_progression = number_progression + ' ' + str(number)
