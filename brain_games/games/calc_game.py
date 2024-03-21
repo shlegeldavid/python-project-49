@@ -1,29 +1,28 @@
+#!/usr/bin/env python3
 from .engine import *
-
-init()
-usernames = []
-answers = []
-correct_answers = []
-numbers = []
-operators = ['+', '-', '*']
-picked_operators = []
-
-def random_number_generation():
-    random_number = random.randint(1, 100)
-    numbers.append(random_number)
-
-def picked_operator():
-    picked_operators.append(random.choice(operators))
 
 
 def calc_brain_game():
+    usernames = []
+    answers = []
+    correct_answers = []
+    numbers = []
+
+    operators = ['+', '-', '*']
+    picked_operators = []
+
+    def picked_operator():
+        picked_operators.append(random.choice(operators))
+
+
     calc_rule = 'What is the result of the expression?'
-    welcome_user()
+    welcome_user(usernames)
     game_rule(calc_rule)
     n = 0
     while n < 3:
-        random_number_generation()
-        random_number_generation()
+        answers = []
+        random_number_generation(numbers)
+        random_number_generation(numbers)
         print(numbers)
         picked_operator()
         first_number = numbers.pop(0)
@@ -41,10 +40,12 @@ def calc_brain_game():
                 expression += first_number * second_number
         correct_answers.append(expression)
         print(correct_answers)
-        answer_quest()
+        answer_quest(answers)
         print(answers)
-        answer_check()
+        answer_check(answers, correct_answers, usernames)
+        if usernames == []:
+             return 
         n += 1
-
-
+    congratulations(usernames)
+    return
 
