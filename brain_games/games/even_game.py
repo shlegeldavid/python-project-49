@@ -9,21 +9,27 @@ def is_even(n):
 
 
 def even_brain_game():
-    name = prompt.string('May I have your name? ')
-    print('Hello, ' + name)
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    usernames = []
+    answers = []
+    correct_answers = []
+    numbers = []
+    even_rule = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+    welcome_user(usernames)
+    game_rule(even_rule)
     n = 0
     while n < 3:
-        random_number = random.randint(1, 100)
-        print('Question: ' + str(random_number))
-        answer = prompt.string('Your answer: ')
-        if is_even(random_number) == answer:
-            print('Correct!')
-            n += 1
-        else:
-            if is_even(random_number) == 'yes' and is_even(random_number) != answer:
-                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
-    print(f'Congratulations, {name}!')
-    
-
+        answers = []
+        random_number_generation(numbers)
+        number = numbers.pop()
+        even_question = f'{str(number)}'
+        question(even_question)
+        correct_answer = is_even(number)
+        correct_answers.append(correct_answer)
+        answer_request_string(answers)
+        answer_check(answers, correct_answers, usernames)
+        if usernames == []:
+            return
+        n += 1
+    congratulations(usernames)
+    return

@@ -18,8 +18,13 @@ def question(question_body):
     print(f'Question: {question_body}')
 
 
-def answer_quest(answers):
+def answer_request_integer(answers):
     answer = prompt.integer('Your answer: ')
+    answers.append(answer)
+
+
+def answer_request_string(answers):
+    answer = prompt.string('Your answer: ')
     answers.append(answer)
 
 
@@ -29,7 +34,7 @@ def answer_check(answers, correct_answers, usernames):
     if answer == correct_answer:
         print('Correct!')
     else:
-        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
         print(f"Let's try again, {usernames.pop()}!")
 
 
@@ -41,3 +46,14 @@ def random_number_generation(numbers):
 def congratulations(usernames):
     name = usernames.pop()
     print(f'Congratulations, {name}!')
+
+
+def gcd_func(a, b):
+    if a > b:
+        temporal = b
+    else:
+        temporal = a
+    for i in range(1, temporal + 1):
+        if (a % i == 0) and (b % i == 0):
+            gcd = i
+    return gcd

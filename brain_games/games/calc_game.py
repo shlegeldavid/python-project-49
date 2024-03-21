@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from .engine import welcome_user, game_rule, question, answer_check, answer_quest, random_number_generation, congratulations, random
+from .engine import welcome_user, game_rule, question, answer_check, answer_request_integer, random_number_generation, congratulations, random
 
 
 def calc_brain_game():
@@ -36,7 +36,7 @@ def calc_brain_game():
             case '*':
                 expression += first_number * second_number
         correct_answers.append(expression)
-        answer_quest(answers)
+        answer_request_integer(answers)
         answer_check(answers, correct_answers, usernames)
         if usernames == []:
             return

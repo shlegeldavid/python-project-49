@@ -4,3 +4,4 @@
 
 https://asciinema.org/a/4rMRQfHlZAFRpACow3HTYItp1 //brain-even game rec
 https://asciinema.org/a/zM6oJyVYFKot0ZoPHN3fh7Ykd //brain-calc game rec
+https://asciinema.org/a/SXA9RGc0KFFmfZejisREhpnNG //brain-gcd game rec
