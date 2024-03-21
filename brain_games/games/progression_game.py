@@ -43,7 +43,7 @@ def progression_brain_game():
                 numbers[i] = '..'
         while index < list_length:
             number = numbers.pop(0)
-            number_progression = number_progression + ' ' + str(number)
+            number_progression = number_progression + str(number) + ' '
             index += 1
         correct_answers.append(missing_part)
         question(number_progression)
