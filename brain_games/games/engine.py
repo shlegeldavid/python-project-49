@@ -43,6 +43,10 @@ def random_number_generation(numbers):
     numbers.append(random_number)
 
 
+def random_number_for_progression(numbers):
+    random_number = random.randint(1, 20)
+    numbers.append(random_number)
+
 def congratulations(usernames):
     name = usernames.pop()
     print(f'Congratulations, {name}!')
