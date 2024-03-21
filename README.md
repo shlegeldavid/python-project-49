@@ -9,3 +9,5 @@ https://asciinema.org/a/zM6oJyVYFKot0ZoPHN3fh7Ykd //brain-calc game rec
 https://asciinema.org/a/SXA9RGc0KFFmfZejisREhpnNG //brain-gcd game rec
 
 https://asciinema.org/a/onEPtlujA1gSvJRXMe06NkS5D //brain-progression game rec
+
+https://asciinema.org/a/YuyASOZoz1voffsPQX73hVtb6 //brain-prime game rec
