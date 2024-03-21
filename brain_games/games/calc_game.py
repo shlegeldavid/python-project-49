@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from .engine import *
+from .engine import welcome_user, game_rule, question, answer_check, answer_quest, random_number_generation, congratulations, random
 
 
 def calc_brain_game():
@@ -7,15 +7,13 @@ def calc_brain_game():
     answers = []
     correct_answers = []
     numbers = []
-
+    calc_rule = 'What is the result of the expression?'
     operators = ['+', '-', '*']
     picked_operators = []
 
     def picked_operator():
         picked_operators.append(random.choice(operators))
 
-
-    calc_rule = 'What is the result of the expression?'
     welcome_user(usernames)
     game_rule(calc_rule)
     n = 0
@@ -23,12 +21,11 @@ def calc_brain_game():
         answers = []
         random_number_generation(numbers)
         random_number_generation(numbers)
-        print(numbers)
         picked_operator()
         first_number = numbers.pop(0)
         second_number = numbers.pop()
         picked_operator_from_coll = picked_operators.pop()
-        calc_question = str(first_number) + ' ' +  picked_operator_from_coll + ' ' + str(second_number)
+        calc_question = str(first_number) + ' ' + picked_operator_from_coll + ' ' + str(second_number)
         question(calc_question)
         expression = 0
         match picked_operator_from_coll:
@@ -39,13 +36,10 @@ def calc_brain_game():
             case '*':
                 expression += first_number * second_number
         correct_answers.append(expression)
-        print(correct_answers)
         answer_quest(answers)
-        print(answers)
         answer_check(answers, correct_answers, usernames)
         if usernames == []:
-             return 
+            return
         n += 1
     congratulations(usernames)
     return
-

@@ -9,6 +9,7 @@ def welcome_user(usernames):
     print(f'Hello, {name}!')
     usernames.append(name)
 
+
 def game_rule(rule):
     print(rule)
 
@@ -30,8 +31,7 @@ def answer_check(answers, correct_answers, usernames):
     else:
         print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
         print(f"Let's try again, {usernames.pop()}!")
-        
-    
+
 
 def random_number_generation(numbers):
     random_number = random.randint(1, 100)
