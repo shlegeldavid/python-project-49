@@ -1,4 +1,13 @@
-from .engine import gcd_func, welcome_user, game_rule, question, answer_check, answer_request_integer, random_number_generation, congratulations
+from .engine import (
+    gcd_func,
+    welcome_user,
+    game_rule,
+    question,
+    answer_check,
+    answer_request_integer,
+    random_number_generation,
+    congratulations
+)
 
 
 def gcd_brain_game():

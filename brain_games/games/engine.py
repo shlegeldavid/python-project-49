@@ -34,7 +34,8 @@ def answer_check(answers, correct_answers, usernames):
     if answer == correct_answer:
         print('Correct!')
     else:
-        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+        print(f"'{answer}' is wrong answer ;(. "
+              + f"Correct answer was '{correct_answer}'.")
         print(f"Let's try again, {usernames.pop()}!")
 
 
@@ -46,6 +47,7 @@ def random_number_generation(numbers):
 def random_number_for_progression(numbers):
     random_number = random.randint(1, 20)
     numbers.append(random_number)
+
 
 def congratulations(usernames):
     name = usernames.pop()

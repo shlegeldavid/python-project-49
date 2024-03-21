@@ -1,6 +1,13 @@
-import prompt
-import random
-from .engine import *
+from .engine import (
+    welcome_user,
+    game_rule,
+    question,
+    answer_check,
+    answer_request_string,
+    random_number_generation,
+    congratulations,
+)
+
 
 def is_even(n):
     if n % 2 == 0:
